@@ -1,0 +1,497 @@
+
+:root {
+  --colour1: #9A55B2;
+  --colour2: #791B99;
+  --colour3: #A993FF;
+}
+
+
+/* ---------- General Styling ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quattrocento', serif;
+  margin: 0;
+  color: var(--colour2);
+}
+
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #58485d;
+}
+
+a {
+  color: var(--colour1);
+  text-decoration: none;
+}
+
+hr { /* https://stackoverflow.com/questions/12639823/hr-not-showing */
+  height: 1px;
+  border: 0;
+  margin: 1.5em 0 0 -0.5em;
+  clear: both;
+  width: 100%;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  margin: 0.5em 0;
+}
+
+img {
+  display: block;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
+
+/* --------- Header and Navigation Bar Styling --------- */
+
+#headerLogo {
+  font-size: 1.25em;
+}
+
+.header {
+  padding-left: 10%;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a, .navbar a {
+  text-decoration: none;
+  color: #fbf7f5;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+header a {
+  padding: 25px 5px;
+}
+
+.navbar a {
+  width: 100%;
+  padding: 15px 5px;
+}
+
+.headerGridContainer {
+  background: var(--colour2);
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+  color: #fbf7f5;
+}
+
+.hamburgerNav {
+  font-size: 1.75em;
+  text-align: right;
+  padding-right: 25px;
+}
+
+.navbar ul {
+  list-style: none;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  flex: 1;
+  background: var(--colour1)
+}
+
+.navbar li:hover {
+  background: var(--colour3);
+  transition: all 0.5s;
+}
+
+.navbar ul {
+  display: none;
+}
+
+.navbar ul.open {
+  display: flex;
+
+}
+
+
+/* --------- Footer Styling --------- */
+
+.footer h4 {
+  color: #fbf7f5;
+}
+
+.footer {
+  background: var(--colour2);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #fbf7f5;
+  padding: 0 15%;
+}
+
+.footer ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  padding: 3px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fbf7f5;
+}
+
+.footer a:hover {
+  color: var(--colour3);
+}
+
+
+/* ---------- General Images Styling ---------- */
+
+.inspirationalImage {
+  width: 100%;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  max-height: 50vw;
+  object-fit: cover;
+}
+
+.otherImage {
+  width: 100%;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.studentImage {
+  display: none;
+}
+
+/* ---------- Homepage Styling ---------- */
+
+/* Main content */
+
+.mainContent {
+  padding: 7%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+}
+
+.study h2:hover, .research h2:hover {
+  color: #301c4b;
+}
+
+/* Student Quote */
+
+.studentQuote blockquote {
+  margin: 1.25em 20px 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--colour1);
+}
+
+.studentQuote cite {
+  display: block;
+  text-align: right;
+  margin: 5px 15px 0 0;
+  color: var(--colour2);
+}
+
+.studentImage {
+  display: none;
+}
+
+/* News Section */
+
+.news {
+  margin-top: 0.5em;
+  border: 1px solid #000;
+}
+
+.news h4:hover {
+  color: #301c4b;
+}
+
+.news1 {
+  margin-top: 2.25em;
+}
+
+.news h4 {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.news img {
+  width: 100%;
+  border-bottom: 1px solid #818181;
+}
+
+
+/* ---------- Research & Study Page Styling ---------- */
+
+.researchStudyContent {
+  padding: 7%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+}
+
+.topHeading {
+  text-align: right;
+}
+
+.sideHeading {
+  display: none;
+}
+
+.researchStudyImage {
+  max-height: 40vw;
+}
+
+
+/* --------------- Media queries for responsive design --------------- */
+
+@media (min-width: 550px) {
+
+  /* Header and Navbar Responsive Styling */
+  .hamburgerNav{
+    display: none;
+  }
+
+  .header {
+    border: 0;
+    padding: 15px 0 15px 15%;
+  }
+
+  .navbar li {
+    background: var(--colour2);
+  }
+
+  .navbar a:hover {
+    background: var(--colour2);
+    color: var(--colour3);
+  }
+
+  .headerGridContainer {
+    display: grid;
+    border-bottom: 1px solid #000;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10%;
+    align-items: center;
+
+  }
+
+  .navbar ul {
+    display: flex;
+    border: 0;
+  }
+
+  /* Homepage Responsive Styling */
+
+  .inspirationalImage {
+    max-height: 45vw;
+  }
+
+  .mainContent {
+    display: grid;
+    padding: 5%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 25% 20% 10% 8%;
+    grid-gap: 30px 40px;
+  }
+
+  .inspirationalContent {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .overlaidSlogan {
+    font-size: 1.15em;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: relative;
+  }
+
+  .overlaidSlogan h2 {
+    position: absolute;
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 3px 3px #4a4b4b;
+    margin: 0;
+    padding: 5% 10%;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .study {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+  }
+
+  .research {
+    grid-column: 7 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .studentQuote {
+    grid-column: 1 / 8;
+    grid-row: 3 / 4;
+    align-self: center;
+  }
+
+  .studentImage {
+    display: block;
+    grid-column: 8 / -1;
+    grid-row: 3 / 4;
+    align-self: center;
+  }
+
+  .news1 {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+
+  .news2 {
+    grid-column: 5 / 9;
+    grid-row: 4 / 5;
+  }
+
+  .news3 {
+    grid-column: 9 / -1;
+    grid-row: 4 / 5;
+  }
+
+  .studentQuote hr:first-child {
+    margin-top: 0;
+  }
+
+  .news1 {
+    margin-top: 0.5em;
+  }
+
+  /* Research & Study Page Responsive CSS */
+  .topHeading {
+    display: none;
+  }
+
+  .sideHeading {
+    display: inline;
+  }
+
+  .researchStudyContent {
+    padding: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    grid-gap: 25px 20px;
+  }
+
+  .researchStudyContent h1 {
+    grid-column: 1 / -1;
+  }
+
+  .researchStudy2Text {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .researchStudy1Text, .researchStudy3Text,
+  .researchStudy1Text p, .researchStudy3Text p {
+    text-align: right;
+  }
+}
+
+
+/* ------------------ Additonal Media Queries ------------------- */
+/* - (incremental changes for better display on larger screens) - */
+
+@media (min-width: 800px) {
+
+  /* Header and Navbar Responsive CSS */
+  .headerGridContainer {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 100px;
+  }
+
+  .header {
+    padding-left: 0;
+  }
+
+  .navbar {
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  /* Homepage Responsive CSS */
+  .mainContent {
+    padding: 4% 10%;
+  }
+
+  /* Research & Study Page Responsive CSS */
+  .researchStudyContent {
+    padding: 4% 10%;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  /* Header and Navbar Responsive CSS */
+  .headerGridContainer {
+    padding: 0 150px;
+  }
+
+  /* Homepage Responsive CSS */
+  .mainContent {
+    padding: 4% 17.5%;
+  }
+
+  /* Research & Study Page Responsive CSS */
+  .researchStudyContent {
+    padding: 4% 17.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* Homepage Responsive CSS */
+  .mainContent {
+    padding: 2% 20%;
+  }
+
+  /* Research & Study Page Responsive CSS */
+  .researchStudyContent {
+    padding: 2% 20%;
+  }
+}
+
+@media (min-width: 1500px) {
+
+  /* Homepage Responsive CSS */
+  .mainContent {
+    padding: 2% 25%;
+  }
+
+  /* Research & Study Page Responsive CSS */
+  .researchStudyContent {
+    padding: 2% 25%;
+  }
+}
