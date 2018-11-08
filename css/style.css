@@ -295,7 +295,7 @@ header a {
     display: grid;
     border-bottom: 1px solid #000;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 10%;
+    /* grid-template-rows: 10%; -- obsolete - causes layout problem due to new update */
     align-items: center;
 
   }
@@ -315,7 +315,7 @@ header a {
     display: grid;
     padding: 5%;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 25% 20% 10% 8%;
+    /* grid-template-rows: 25% 20% 10% 8%; -- obsolete - causes layout problem due to new update */ 
     grid-gap: 30px 40px;
   }
 
